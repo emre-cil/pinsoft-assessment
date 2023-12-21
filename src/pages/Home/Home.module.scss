@@ -13,4 +13,21 @@
   // background-color: red;
   display: flex;
   padding: 20px 0;
+  gap: 20px;
+}
+
+//tablet
+@media (max-width: 1024px) {
+}
+
+// mobile
+
+@media (max-width: 768px) {
+  .container {
+    height: auto;
+  }
+  .content {
+    flex-direction: column;
+    padding: 10px 0;
+  }
 }

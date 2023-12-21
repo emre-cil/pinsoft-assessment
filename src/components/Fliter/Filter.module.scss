@@ -1,5 +1,49 @@
+@import '../../styles/general.scss';
+
 .container {
-  background-color: yellow;
   padding: 10px;
   min-width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  // box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  // inner shadow
+}
+
+.categoryList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.categoryItem {
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    box-shadow 0.3s;
+}
+
+.selected {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); // Change this to your desired shadow
+  color: $primary-color;
+  border-radius: 5px;
+}
+
+.categoryLabel {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #7f8c8d;
+  margin-left: 8px;
+  padding-bottom: 12px;
+}
+
+//tablet
+@media (max-width: 1024px) {
+}
+
+// mobile
+
+@media (max-width: 768px) {
 }

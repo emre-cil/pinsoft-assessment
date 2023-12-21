@@ -1,6 +1,39 @@
-.container {
-  padding: 10px;
+.productListContainer {
+  overflow: hidden;
+  position: relative;
+}
+
+.productList {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
   overflow-x: auto;
-  width: 100%;
-  background-color: blue;
+  transition: transform 0.3s ease;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.scrollButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.scrollButton:hover {
+  background-color: #2980b9;
+}
+
+//tablet
+@media (max-width: 1024px) {
+}
+
+// mobile
+
+@media (max-width: 768px) {
 }

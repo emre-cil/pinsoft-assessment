@@ -30,10 +30,22 @@
 }
 
 //tablet
-@media (max-width: 1024px) {
-}
+// @media (max-width: 1024px) {
+
+// }
 
 // mobile
 
 @media (max-width: 768px) {
+  .productList {
+    flex-wrap: wrap;
+    justify-content: center;
+    border: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  .scrollButton {
+    display: none;
+  }
 }

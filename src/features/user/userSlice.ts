@@ -1,38 +1,63 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  token: null,
-  user: null,
-  mode: localStorage.getItem('mode')
-    ? localStorage.getItem('mode')
-    : window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light',
+  cart: localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart') || '') : [],
 };
 
 export const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    setCredentials: (state, action) => {
-      state.token = action.payload.token;
-      state.user = action.payload.user;
-    },
-    setToken: (state, action) => {
-      state.token = action.payload;
-    },
-    changeMode: (state) => {
-      if (state.mode === 'light') {
-        state.mode = 'dark';
-        localStorage.setItem('mode', 'dark');
+    addToCart: (state, action) => {
+      const item = action.payload;
+      const existItem = state.cart.find((x: any) => x.id === item.id);
+
+      if (existItem) {
+        state.cart = state.cart.map((x: any) =>
+          x.id === existItem.id
+            ? {
+                ...x,
+                count: x.count + 1,
+              }
+            : x,
+        );
       } else {
-        state.mode = 'light';
-        localStorage.setItem('mode', 'light');
+        state.cart.push({
+          ...item,
+          count: 1,
+        });
       }
+      localStorage.setItem('cart', JSON.stringify(state.cart));
+    },
+
+    reduceFromCart: (state, action) => {
+      const item = action.payload;
+      const existItem = state.cart.find((x: any) => x.id === item.id);
+      if (existItem) {
+        if (existItem.count === 1) {
+          state.cart = state.cart.filter((x: any) => x.id !== existItem.id);
+        } else {
+          state.cart = state.cart.map((x: any) =>
+            x.id === existItem.id
+              ? {
+                  ...x,
+                  count: x.count - 1,
+                }
+              : x,
+          );
+        }
+      }
+      localStorage.setItem('cart', JSON.stringify(state.cart));
+    },
+
+    removeFromCart: (state, action) => {
+      const item = action.payload;
+      state.cart = state.cart.filter((x: any) => x.id !== item.id);
+      localStorage.setItem('cart', JSON.stringify(state.cart));
     },
   },
 });
 
-export const { setCredentials, setToken, changeMode } = userSlice.actions;
+export const { addToCart, reduceFromCart, removeFromCart } = userSlice.actions;
 
 export default userSlice.reducer;

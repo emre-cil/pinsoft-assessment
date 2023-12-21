@@ -3,12 +3,15 @@ import React, { useState, useRef } from 'react';
 import styles from './ProductList.module.scss';
 import { ProductType } from '@/types/types';
 import ProductCard from '../ProductCard/ProductCard';
+import { useAppDispatch } from '@/app/store';
+import { addToCart } from '@/features/user/userSlice';
 
 interface ProductListProps {
   products: ProductType[];
 }
 
 const ProductList: React.FC<ProductListProps> = ({ products }) => {
+  const dispatch = useAppDispatch();
   const containerRef = useRef<HTMLDivElement>(null);
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -22,11 +25,15 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
     }
   };
 
+  const addToCartHandler = (product: ProductType) => {
+    dispatch(addToCart(product));
+  };
+
   return (
     <div className={styles.productListContainer} ref={containerRef}>
       <div className={styles.productList}>
         {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard key={product.id} product={product} addToCartHandler={addToCartHandler} />
         ))}
       </div>
       {scrollPosition > 0 && (

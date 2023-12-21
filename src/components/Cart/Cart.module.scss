@@ -15,11 +15,17 @@
 
 .badge {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -6px;
+  left: -6px;
   background-color: $orange;
   color: $white;
-  padding: 4px 8px;
+  padding: 2px 4px;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
   border-radius: 50%;
 }
 
@@ -28,10 +34,10 @@
   top: 100%;
   right: 0;
   background-color: $white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   z-index: 1;
-  min-width: 200px;
-  padding: 10px;
+  min-width: 300px;
+  padding: 10px 20px;
 }
 
 .productList {
@@ -57,6 +63,10 @@
 
 .productName {
   font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
 }
 
 .productCount {
@@ -77,22 +87,39 @@
 .productPrice {
   font-size: 14px;
 }
-
-.removeButton {
-  background-color: $darkOrange;
-  color: $white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: 14px;
+.productCountables {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
 }
 
-.removeAllButton {
-  background-color: $darkOrange;
+.removeButton {
+  font-size: 25px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.checkoutButton {
+  background-color: $primary-color;
   color: $white;
   border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 10px;
   width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $lightOrange;
+  }
+}
+
+.emptyCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }

@@ -1,19 +1,21 @@
-// SearchHeader.js
-
 import React from 'react';
 import styles from './Header.module.scss'; // Replace with the correct path
 import SearchInput from '@/components/SearchInput/SearchInput';
 import Cart from '@/components/Cart/Cart';
 
-function Header() {
+interface HeaderProps {
+  setSearchValue: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const Header: React.FC<HeaderProps> = ({ setSearchValue }) => {
   return (
     <div className={styles.searchHeader}>
       <div className={`centerAligner ${styles.header_container}`}>
-        <SearchInput />
+        <SearchInput setSearchValue={setSearchValue} />
         <Cart />
       </div>
     </div>
   );
-}
+};
 
 export default Header;

@@ -5,12 +5,11 @@
   flex-direction: column;
   border: 1px solid #ddd;
   padding: 10px;
-  max-width: 400px;
-  max-height: 450px;
+  max-width: 300px;
+  max-height: 500px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   flex-grow: 1;
   transition: box-shadow 0.3s ease;
-  gap: 20px;
   &:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
@@ -31,7 +30,8 @@
 
 .productTitle {
   margin: 10px 0;
-  font-size: 1.2em;
+  height: 3em;
+  overflow: hidden;
 }
 
 .line {

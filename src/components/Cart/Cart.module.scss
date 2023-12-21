@@ -1,0 +1,98 @@
+@import '../../styles/general.scss';
+
+.cart {
+  position: relative;
+  cursor: pointer;
+}
+
+.cartIcon {
+  @include flex-center;
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $orange;
+  color: $white;
+  padding: 4px 8px;
+  border-radius: 50%;
+}
+
+.popup {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: $white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  min-width: 200px;
+  padding: 10px;
+}
+
+.productList {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.productImage {
+  max-width: 50px;
+  margin-right: 10px;
+}
+
+.productDetails {
+  flex-grow: 1;
+}
+
+.productName {
+  font-weight: bold;
+}
+
+.productCount {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.countButton {
+  background-color: $lightOrange;
+  border: none;
+  color: $white;
+  padding: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.productPrice {
+  font-size: 14px;
+}
+
+.removeButton {
+  background-color: $darkOrange;
+  color: $white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.removeAllButton {
+  background-color: $darkOrange;
+  color: $white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}

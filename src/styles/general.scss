@@ -9,6 +9,15 @@ $orange: #ff8c00;
 $lightOrange: #ffc966;
 $darkOrange: #d27d00;
 
+// Font
+$font-family: 'Roboto', sans-serif;
+$font-size: 16px;
+$line-height: 1.5;
+$text-color: #333;
+
+// Input
+$input-border-radius: 16px;
+
 // Variables
 $primary-color: $orange;
 
@@ -17,6 +26,18 @@ $primary-color: $orange;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin centered-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin shadow-box {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
 }
 
 // @mixin box-shadow($x, $y, $blur, $color) {
@@ -29,7 +50,7 @@ $primary-color: $orange;
 
 // Global styles
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: $font-family;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
@@ -54,11 +75,8 @@ a {
   }
 }
 
-// Example usage of mixins
-// .example-box {
-//   @include flex-center;
-//   @include box-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
-//   @include border-radius(5px);
-// }
-
-// Add more global styles, colors, and mixins as needed
+.main_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

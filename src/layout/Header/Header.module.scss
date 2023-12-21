@@ -1,0 +1,12 @@
+@import '../../styles/general.scss';
+
+.searchHeader {
+  padding: 10px 0;
+  background-color: $white;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header_container {
+  @include centered-between;
+}

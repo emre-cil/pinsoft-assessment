@@ -5,7 +5,6 @@ import React from 'react';
 const App = () => {
   return (
     <BrowserRouter>
-      <CssBaseline />
       <Routing />
     </BrowserRouter>
   );

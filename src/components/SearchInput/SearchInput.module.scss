@@ -1,0 +1,24 @@
+@import '../../styles/general.scss';
+
+.input_container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.input_icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: $primary-color;
+  font-size: 24px;
+}
+
+.input_field {
+  width: calc(100% - 40px);
+  padding: 10px;
+  padding-left: 40px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+}

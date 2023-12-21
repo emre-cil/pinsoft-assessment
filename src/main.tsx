@@ -1,4 +1,3 @@
-import { AppThemeProvider } from './themes/AppThemeProvider';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import store from './app/store';
@@ -10,9 +9,7 @@ import './styles/general.scss';
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <Provider store={store}>
-      <AppThemeProvider>
-        <App />
-      </AppThemeProvider>
+      <App />
     </Provider>
   </React.StrictMode>,
 );

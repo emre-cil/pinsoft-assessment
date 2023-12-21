@@ -1,20 +1,8 @@
-## vite-mui-ts boilerplate
-
-TypeScript + React + Redux + MUI + RRD + ESLint + Prettier
-
-![vite-mui-ts](https://i.ibb.co/j8JSrhV/Screenshot-2023-07-06-121352.png)
+## Pinsoft assessment
 
 ### Getting Started
 
-#### Clone the repo
 
-```
-npx degit emre-cil/vite-mui-ts my-app
-```
-
-```
-cd my-app
-```
 
 #### Install Dependencies
 

@@ -1,0 +1,65 @@
+// reset.scss
+
+// Box model
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Typography
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+// Lists
+ul,
+ol {
+  list-style: none;
+}
+
+// Forms
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+// Links
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Tables
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+// Other reset styles as needed

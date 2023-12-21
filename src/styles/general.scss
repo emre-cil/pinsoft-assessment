@@ -1,0 +1,64 @@
+// general.scss
+
+// Import the Roboto font from Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+// Colors
+$white: #fff;
+$orange: #ff8c00;
+$lightOrange: #ffc966;
+$darkOrange: #d27d00;
+
+// Variables
+$primary-color: $orange;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// @mixin box-shadow($x, $y, $blur, $color) {
+//   box-shadow: $x $y $blur $color;
+// }
+
+// @mixin border-radius($radius) {
+//   border-radius: $radius;
+// }
+
+// Global styles
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: $white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+a {
+  color: $primary-color;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
+
+// Example usage of mixins
+// .example-box {
+//   @include flex-center;
+//   @include box-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+//   @include border-radius(5px);
+// }
+
+// Add more global styles, colors, and mixins as needed

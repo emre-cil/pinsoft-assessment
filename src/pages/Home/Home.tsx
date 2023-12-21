@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className={styles.container}>
       <Header />
-      <div className="main_container">
+      <div className="centerAligner">
         <div className={styles.content}>
           <Filter />
           <ProductList />

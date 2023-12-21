@@ -8,7 +8,7 @@ import Cart from '@/components/Cart/Cart';
 function Header() {
   return (
     <div className={styles.searchHeader}>
-      <div className={`main_container ${styles.header_container}`}>
+      <div className={`centerAligner ${styles.header_container}`}>
         <SearchInput />
         <Cart />
       </div>

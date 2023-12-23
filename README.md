@@ -1,4 +1,7 @@
+
 ## Pinsoft assessment
+
+Demo: https://pinsoft-assessment-emre-cil.netlify.app/
 
 ### Getting Started
 

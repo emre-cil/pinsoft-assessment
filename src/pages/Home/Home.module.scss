@@ -7,10 +7,6 @@
 }
 
 .content {
-  // /// fit content
-  // flex-grow: 1;
-  // min-width: 100%;
-  // background-color: red;
   display: flex;
   padding: 20px 0;
   gap: 20px;
@@ -18,11 +14,6 @@
 
 //tablet
 @media (max-width: 1024px) {
-}
-
-// mobile
-
-@media (max-width: 768px) {
   .container {
     height: auto;
   }
@@ -31,3 +22,7 @@
     padding: 10px 0;
   }
 }
+
+// mobile
+// @media (max-width: 768px) {
+// }

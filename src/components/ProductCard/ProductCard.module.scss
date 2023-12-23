@@ -64,12 +64,12 @@
 @media (max-width: 1024px) {
   .productCard {
     max-width: 300px;
-    max-height: 350px;
+    min-height: 400px;
   }
 
   .productImage {
-    min-width: 200px;
-    min-height: 200px;
+    min-width: 250px;
+    min-height: 250px;
   }
 }
 
@@ -77,11 +77,13 @@
 
 @media (max-width: 768px) {
   .productCard {
-    width: 100%;
+    min-width: 100%;
+    min-height: 500px;
+    border-radius: 5px;
   }
 
   .productImage {
-    min-width: 150px;
-    min-height: 150px;
+    min-width: 300px;
+    min-height: 300px;
   }
 }

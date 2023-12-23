@@ -1,12 +1,11 @@
 @import '../../styles/general.scss';
 
 .container {
-  padding: 10px;
+  padding: 5px;
   min-width: 200px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  // box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  // inner shadow
+  overflow: hidden;
 }
 
 .categoryList {
@@ -36,14 +35,31 @@
   text-transform: uppercase;
   color: #7f8c8d;
   margin-left: 8px;
-  padding-bottom: 12px;
 }
 
+.categoryTitle {
+  svg {
+    display: none;
+    color: #7f8c8d;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 0;
+}
 //tablet
 @media (max-width: 1024px) {
+  .categoryTitle {
+    svg {
+      display: block;
+    }
+  }
 }
 
 // mobile
+// @media (max-width: 768px) {
 
-@media (max-width: 768px) {
-}
+// }
